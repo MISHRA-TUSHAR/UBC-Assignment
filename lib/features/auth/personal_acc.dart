@@ -187,7 +187,7 @@ class _PersonalAccountScreenState extends State<PersonalAccountScreen> {
                   text: 'Create Profile',
                   color: Constants.btnColor,
                   onTap: () {
-                    // Handle form submission here
+                    Navigator.of(context).pushNamed('/personal-profile');
                   },
                 ),
               ),
@@ -196,9 +196,7 @@ class _PersonalAccountScreenState extends State<PersonalAccountScreen> {
                 child: CustomButton(
                   text: 'Create A Business Account',
                   color: Colors.grey,
-                  onTap: () {
-                    // Handle form submission here
-                  },
+                  onTap: () {},
                 ),
               ),
             ],

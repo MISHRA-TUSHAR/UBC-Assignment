@@ -3,6 +3,9 @@ import 'package:assignment/features/auth/email_screen.dart';
 import 'package:assignment/features/auth/otp_screen.dart';
 import 'package:assignment/features/auth/personal_acc.dart';
 import 'package:assignment/features/auth/signin.dart';
+import 'package:assignment/features/profiles/loan.dart';
+import 'package:assignment/features/profiles/personal_profile.dart';
+import 'package:assignment/features/profiles/profile_display.dart';
 import 'package:assignment/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +48,24 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => PersonalAccountScreen(),
+      );
+
+    case PersonalProfileScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => PersonalProfileScreen(),
+      );
+
+    case ProfileDisplayScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => ProfileDisplayScreen(),
+      );
+
+    case LoanScreen.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => LoanScreen(),
       );
 
     default:

@@ -5,6 +5,7 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final int maxLines;
   final TextInputType keyboardType;
+  final FormFieldValidator<String>? validator;
 
   const CustomTextField({
     super.key,
@@ -12,6 +13,7 @@ class CustomTextField extends StatelessWidget {
     required this.hintText,
     this.maxLines = 1,
     this.keyboardType = TextInputType.text,
+    this.validator,
   });
 
   @override
@@ -32,12 +34,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
       ),
-      validator: (val) {
-        if (val == null || val.isEmpty) {
-          return 'Enter your $hintText';
-        }
-        return null;
-      },
+      validator: validator,
       maxLines: maxLines,
     );
   }
