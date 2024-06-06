@@ -47,7 +47,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Navigate to SigninScreen after animation completes
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed(SigninScreen.routeName);
     });
